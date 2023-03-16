@@ -6,7 +6,7 @@ let button$$ = document.querySelector("button");
 let div$$ = document.createElement("div");
 
   const search = async (persona) => {
-    const response = await fetch(https://api.nationalize.io?name=${input$$.value});
+    const response = await fetch('https://api.nationalize.io?name=${input$$.value}');
     const responseJson = await response.json();
     console.log(responseJson);
 
@@ -19,13 +19,13 @@ let div$$ = document.createElement("div");
     let btn$$ = document.createElement("button");
 
     btn$$.innerHTML = "X";
-    let text = El nombre ${persona.name} tiene;
+    let text = 'El nombre ${persona.name} tiene';
 
     for (let i = 0; i < persona.country.length; i++) {
         console.log(i + persona.country[i].probability);
 
         const percen = Math.floor(persona.country[i].probability * 100);
-        text +=  un ${percen} de ser de ${persona.country[i].country_id}
+        text +=  'un ${percen} de ser de ${persona.country[i].country_id}'
     };
 
     p$$.textContent = text;
